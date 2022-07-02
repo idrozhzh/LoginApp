@@ -18,18 +18,9 @@ class LoginViewController: UIViewController {
     let username = "Debash"
     let password = "qwerty"
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
-        
         view.endEditing(true)
-    }
-    
-    @IBAction func loginButtonTapped() {
     }
     
     @IBAction func reminderButtonTapped(_ sender: UIButton) {
@@ -40,7 +31,11 @@ class LoginViewController: UIViewController {
         }
     }
     
-    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        guard segue.source is WelcomeViewController else { return }
+        usernameTF.text = ""
+        passwordTF.text = ""
+    }
     
 }
 

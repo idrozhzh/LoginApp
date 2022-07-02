@@ -38,7 +38,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Log In"/>
                                         <connections>
-                                            <action selector="loginButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="L1Q-IM-u4z"/>
+                                            <segue destination="kbr-Ip-SSu" kind="presentation" modalPresentationStyle="fullScreen" id="Eth-q3-yoY"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="h26-h0-Srj">
@@ -123,6 +123,9 @@
                                         <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Log out"/>
+                                        <connections>
+                                            <segue destination="a9N-QA-m9D" kind="unwind" unwindAction="unwindFor:" id="KWs-1C-aKh"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -146,8 +149,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7tT-1k-sne" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="a9N-QA-m9D" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="802.89855072463774" y="88.392857142857139"/>
+            <point key="canvasLocation" x="814" y="94"/>
         </scene>
     </scenes>
     <resources>
