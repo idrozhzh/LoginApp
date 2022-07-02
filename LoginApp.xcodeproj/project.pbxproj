@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B31ACB0C287079C10019F0D1 /* LohinApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LohinApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B31ACB0C287079C10019F0D1 /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B31ACB0F287079C10019F0D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B31ACB11287079C10019F0D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B31ACB13287079C10019F0D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		B31ACB0D287079C10019F0D1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B31ACB0C287079C10019F0D1 /* LohinApp.app */,
+				B31ACB0C287079C10019F0D1 /* LoginApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,9 +70,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B31ACB0B287079C10019F0D1 /* LohinApp */ = {
+		B31ACB0B287079C10019F0D1 /* LoginApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B31ACB20287079C40019F0D1 /* Build configuration list for PBXNativeTarget "LohinApp" */;
+			buildConfigurationList = B31ACB20287079C40019F0D1 /* Build configuration list for PBXNativeTarget "LoginApp" */;
 			buildPhases = (
 				B31ACB08287079C10019F0D1 /* Sources */,
 				B31ACB09287079C10019F0D1 /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = LohinApp;
+			name = LoginApp;
 			productName = LohinApp;
-			productReference = B31ACB0C287079C10019F0D1 /* LohinApp.app */;
+			productReference = B31ACB0C287079C10019F0D1 /* LoginApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B31ACB07287079C10019F0D1 /* Build configuration list for PBXProject "LohinApp" */;
+			buildConfigurationList = B31ACB07287079C10019F0D1 /* Build configuration list for PBXProject "LoginApp" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B31ACB0B287079C10019F0D1 /* LohinApp */,
+				B31ACB0B287079C10019F0D1 /* LoginApp */,
 			);
 		};
 /* End PBXProject section */
@@ -304,7 +304,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -332,14 +332,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B31ACB07287079C10019F0D1 /* Build configuration list for PBXProject "LohinApp" */ = {
+		B31ACB07287079C10019F0D1 /* Build configuration list for PBXProject "LoginApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B31ACB1E287079C40019F0D1 /* Debug */,
@@ -348,7 +348,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B31ACB20287079C40019F0D1 /* Build configuration list for PBXNativeTarget "LohinApp" */ = {
+		B31ACB20287079C40019F0D1 /* Build configuration list for PBXNativeTarget "LoginApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B31ACB21287079C40019F0D1 /* Debug */,
