@@ -68,7 +68,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
                         <constraints>
                             <constraint firstItem="lMn-aR-34U" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.334821" id="30S-tz-O1p"/>
                             <constraint firstItem="lMn-aR-34U" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="P2E-3Z-hfv"/>
@@ -101,23 +101,23 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="EYj-gc-KW9">
-                                <rect key="frame" x="95" y="543" width="224.5" height="269"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EYj-gc-KW9">
+                                <rect key="frame" x="103.5" y="543" width="207.5" height="269"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, [Username]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHg-yz-eHv">
-                                        <rect key="frame" x="0.0" y="0.0" width="224.5" height="20"/>
-                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, [Username]" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHg-yz-eHv">
+                                        <rect key="frame" x="0.0" y="0.0" width="207.5" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="AlNile-Bold" family="Al Nile" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0KL-2s-syh">
-                                        <rect key="frame" x="89.5" y="105" width="45" height="48"/>
+                                        <rect key="frame" x="81" y="109" width="45" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXZ-W7-I9v">
-                                        <rect key="frame" x="73" y="238" width="78" height="31"/>
+                                        <rect key="frame" x="64.5" y="238" width="78" height="31"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
@@ -160,8 +160,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="tertiarySystemFillColor">
+            <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
