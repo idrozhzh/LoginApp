@@ -23,11 +23,24 @@ class LoginViewController: UIViewController {
         view.endEditing(true)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if usernameTF.text != username {
+            showAlert(title: "Oooops!", message: "Username or password was entered incorrectly. Please try again")
+            passwordTF.text = ""
+            return
+        }
+        if passwordTF.text != password {
+            showAlert(title: "Oooops!", message: "Username or password was entered incorrectly. Please try again")
+            passwordTF.text = ""
+            return
+        }
+    }
+    
     @IBAction func reminderButtonTapped(_ sender: UIButton) {
         if sender == forgotUserButton {
-            showAlert(message: "User name is \(username)")
+            showAlert(title: "Don't tell anyone!🤫", message: "User name is \(username)")
         } else if sender == forgotPassButton {
-            showAlert(message: "Your password is \(password)")
+            showAlert(title: "Don't tell anyone!🤫", message: "Your password is \(password)")
         }
     }
     
@@ -41,9 +54,9 @@ class LoginViewController: UIViewController {
 
 // MARK: Extension
 extension LoginViewController {
-    private func showAlert(message: String) {
+    private func showAlert(title: String, message: String) {
         let alert = UIAlertController(
-            title: "Don't tell anyone!🤫",
+            title: title,
             message: message,
             preferredStyle: .alert
         )
