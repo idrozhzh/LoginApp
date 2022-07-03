@@ -16,29 +16,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="8IQ-ay-oc4">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nls" translatesAutoresizingMaskIntoConstraints="NO" id="2vt-mn-kS7">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
                         <constraints>
-                            <constraint firstItem="8IQ-ay-oc4" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="MFj-Lm-2NW"/>
-                            <constraint firstAttribute="trailing" secondItem="8IQ-ay-oc4" secondAttribute="trailing" id="f1o-D1-Mpp"/>
-                            <constraint firstItem="8IQ-ay-oc4" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="p1J-4B-aC2"/>
-                            <constraint firstAttribute="bottom" secondItem="8IQ-ay-oc4" secondAttribute="bottom" id="pOt-Q8-Zhp"/>
+                            <constraint firstItem="2vt-mn-kS7" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="EMF-wZ-dsf"/>
+                            <constraint firstItem="2vt-mn-kS7" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Npb-8V-mS6"/>
+                            <constraint firstItem="2vt-mn-kS7" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" id="QFH-aY-9hn"/>
+                            <constraint firstAttribute="bottom" secondItem="2vt-mn-kS7" secondAttribute="bottom" id="p9m-AB-Sze"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
     <resources>
-        <image name="launchScreen" width="540" height="960"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <image name="nls" width="540" height="960"/>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
