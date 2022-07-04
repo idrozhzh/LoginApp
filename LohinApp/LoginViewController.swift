@@ -12,11 +12,12 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
-    @IBOutlet weak var forgotUserButton: UIButton!
-    @IBOutlet weak var forgotPassButton: UIButton!
+    private let username = "Debash"
+    private let password = "qwerty"
     
-    let username = "Debash"
-    let password = "qwerty"
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
@@ -24,30 +25,41 @@ class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        welcomeVC.username = usernameTF.text ?? "User"
+    }
+    
+    @IBAction func loginButtonTapped() {
         if usernameTF.text != username {
-            showAlert(title: "Oooops!", message: "User with similar username/password combination not found. Please try again")
-            passwordTF.text = ""
+            showAlert(
+                title: "Oooops!",
+                message: "User with similar username/password combination not found. Please try again"
+            )
             return
         } else if passwordTF.text != password {
-            showAlert(title: "Oooops!", message: "User with similar username/password combination not found. Please try again")
-            passwordTF.text = ""
+            showAlert(
+                title: "Oooops!",
+                message: "User with similar username/password combination not found. Please try again"
+            )
             return
         }
-        
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.username = usernameTF.text
     }
     
     @IBAction func reminderButtonTapped(_ sender: UIButton) {
-        if sender == forgotUserButton {
-            showAlert(title: "Don't tell anyone!🤫", message: "User name is \(username)")
-        } else if sender == forgotPassButton {
-            showAlert(title: "Don't tell anyone!🤫", message: "Your password is \(password)")
+        if sender.tag == 1 {
+            showAlert(
+                title: "Don't tell anyone!🤫",
+                message: "User name is \(username)"
+            )
+        } else if sender.tag == 2 {
+            showAlert(
+                title: "Don't tell anyone!🤫",
+                message: "Your password is \(password)"
+            )
         }
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
-        guard segue.source is WelcomeViewController else { return }
         usernameTF.text = ""
         passwordTF.text = ""
     }
@@ -61,7 +73,9 @@ extension LoginViewController {
             message: message,
             preferredStyle: .alert
         )
-        let okAction = UIAlertAction(title: "Ok", style: .default)
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: { _ in
+            self.passwordTF.text = ""
+        })
         alert.addAction(okAction)
         present(alert, animated: true)
     }
