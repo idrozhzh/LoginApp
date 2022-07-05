@@ -26,23 +26,20 @@ class LoginViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.username = usernameTF.text ?? "User"
+        welcomeVC.username = username
     }
     
     @IBAction func loginButtonTapped() {
-        if usernameTF.text != username {
+        guard usernameTF.text == username, passwordTF.text == password else {
             showAlert(
                 title: "Oooops!",
-                message: "User with similar username/password combination not found. Please try again"
-            )
-            return
-        } else if passwordTF.text != password {
-            showAlert(
-                title: "Oooops!",
-                message: "User with similar username/password combination not found. Please try again"
+                message: "Password or Username is incorrect. Please try again",
+                textfield: passwordTF
             )
             return
         }
+        performSegue(withIdentifier: "showWelcomeVC", sender: nil)
+
     }
     
     @IBAction func reminderButtonTapped(_ sender: UIButton) {
@@ -67,14 +64,14 @@ class LoginViewController: UIViewController {
 
 // MARK: Extension
 extension LoginViewController {
-    private func showAlert(title: String, message: String) {
+    private func showAlert(title: String, message: String, textfield: UITextField? = nil) {
         let alert = UIAlertController(
             title: title,
             message: message,
             preferredStyle: .alert
         )
         let okAction = UIAlertAction(title: "Ok", style: .default, handler: { _ in
-            self.passwordTF.text = ""
+            textfield?.text = ""
         })
         alert.addAction(okAction)
         present(alert, animated: true)
