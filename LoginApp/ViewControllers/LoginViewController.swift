@@ -12,8 +12,10 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
-    private let username = "Debash"
-    private let password = "qwerty"
+    private let user = User(
+        avatar: "avatar.jpg",
+        person: Person.getPerson()
+    )
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
@@ -26,11 +28,11 @@ class LoginViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.username = username
+        welcomeVC.username = user.person.name
     }
     
     @IBAction func loginButtonTapped() {
-        guard usernameTF.text == username, passwordTF.text == password else {
+        guard usernameTF.text == user.username, passwordTF.text == user.password else {
             showAlert(
                 title: "Oooops!",
                 message: "Password or Username is incorrect. Please try again",
@@ -46,12 +48,12 @@ class LoginViewController: UIViewController {
         if sender.tag == 1 {
             showAlert(
                 title: "Don't tell anyone!🤫",
-                message: "User name is \(username)"
+                message: "User name is \(user.username)"
             )
         } else if sender.tag == 2 {
             showAlert(
                 title: "Don't tell anyone!🤫",
-                message: "Your password is \(password)"
+                message: "Your password is \(user.password)"
             )
         }
     }
