@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  LohinApp
+//  LoginApp
 //
 //  Created by Иван Дрожжин on 02.07.2022.
 //
