@@ -12,10 +12,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
-    private let user = User(
-        avatar: "avatar.jpg",
-        person: Person.getPerson()
-    )
+    private let user = User.getUserData()
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
@@ -27,15 +24,27 @@ class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.username = user.person.name
+        guard let tabBarVC = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarVC.viewControllers else { return }
+        
+        viewControllers.forEach {
+            if let welcomeVC = $0 as? WelcomeViewController {
+                welcomeVC.user = user
+            } else if let navigationVC = $0 as? UINavigationController {
+                guard
+                    let personVC = navigationVC.topViewController as? PersonViewController
+                else { return }
+                personVC.user = user
+            }
+            
+        }
     }
     
     @IBAction func loginButtonTapped() {
-        guard usernameTF.text == user.username, passwordTF.text == user.password else {
+        guard usernameTF.text == user.login, passwordTF.text == user.password else {
             showAlert(
                 title: "Oooops!",
-                message: "Password or Username is incorrect. Please try again",
+                message: "Password or Login is incorrect. Please try again",
                 textfield: passwordTF
             )
             return
@@ -48,7 +57,7 @@ class LoginViewController: UIViewController {
         if sender.tag == 1 {
             showAlert(
                 title: "Don't tell anyone!🤫",
-                message: "User name is \(user.username)"
+                message: "User name is \(user.login)"
             )
         } else if sender.tag == 2 {
             showAlert(

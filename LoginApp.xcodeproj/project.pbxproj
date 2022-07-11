@@ -15,6 +15,9 @@
 		B31ACB19287079C40019F0D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B31ACB18287079C40019F0D1 /* Assets.xcassets */; };
 		B31ACB1C287079C40019F0D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B31ACB1A287079C40019F0D1 /* LaunchScreen.storyboard */; };
 		B31ACB2428707AA00019F0D1 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31ACB2328707AA00019F0D1 /* WelcomeViewController.swift */; };
+		B3BA862D2875CC630076D9AB /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BA862C2875CC630076D9AB /* PersonViewController.swift */; };
+		B3BA862F2875CC740076D9AB /* PersonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BA862E2875CC740076D9AB /* PersonDetailsViewController.swift */; };
+		B3F3330C287B5D7B007CCF83 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F3330B287B5D7B007CCF83 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -97,6 +100,9 @@
 		B31ACB1B287079C40019F0D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B31ACB1D287079C40019F0D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B31ACB2328707AA00019F0D1 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		B3BA862C2875CC630076D9AB /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
+		B3BA862E2875CC740076D9AB /* PersonDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewController.swift; sourceTree = "<group>"; };
+		B3F3330B287B5D7B007CCF83 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +148,9 @@
 			children = (
 				B31ACB13287079C10019F0D1 /* LoginViewController.swift */,
 				B31ACB2328707AA00019F0D1 /* WelcomeViewController.swift */,
+				B3BA862C2875CC630076D9AB /* PersonViewController.swift */,
+				B3BA862E2875CC740076D9AB /* PersonDetailsViewController.swift */,
+				B3F3330B287B5D7B007CCF83 /* TabBarController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -260,10 +269,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B31ACB14287079C10019F0D1 /* LoginViewController.swift in Sources */,
+				B3F3330C287B5D7B007CCF83 /* TabBarController.swift in Sources */,
+				B3BA862D2875CC630076D9AB /* PersonViewController.swift in Sources */,
 				B31ACB2428707AA00019F0D1 /* WelcomeViewController.swift in Sources */,
 				B31ACB10287079C10019F0D1 /* AppDelegate.swift in Sources */,
 				B300D9132874C6E100800F98 /* User.swift in Sources */,
 				B31ACB12287079C10019F0D1 /* SceneDelegate.swift in Sources */,
+				B3BA862F2875CC740076D9AB /* PersonDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
